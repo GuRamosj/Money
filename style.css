@@ -1,0 +1,404 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #1f2937;
+}
+
+/* HEADER */
+header {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+header .logo {
+  height: 55px;
+}
+
+/* MENU SUPERIOR */
+header {
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+.menu {
+  display: flex;
+  gap: 25px;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #1f2937;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.menu a:hover {
+  color: #dc2626;
+}
+
+/* MOBILE — transformar menu em botão */
+@media (max-width: 700px) {
+  .menu {
+    display: none; /* esconde em mobile */
+  }
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 35px;
+  font-size: 32px;
+}
+
+p.description {
+  text-align: center;
+  margin-top: -5px;
+  font-size: 18px;
+  color: #555;
+}
+
+.box-consulta {
+  background: #ffffff;
+  padding: 30px;
+  margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.box-consulta h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background: #dc2626;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #b91c1c;
+}
+
+/* COMO FUNCIONA */
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 60px;
+  color: #1f2937;
+}
+
+.section-subtitle {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 18px;
+  color: #6b7280;
+}
+
+.funciona-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.card-funciona {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.card-icon {
+  width: 70px;
+  height: 70px;
+  background: #ffe2e2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #dc2626;
+  margin: 0 auto 20px auto;
+}
+
+/* FOOTER */
+.footer {
+  background: #f9fafb;
+  margin-top: 60px;
+  padding: 50px 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: #374151;
+}
+
+.footer ul li a:hover {
+  color: #dc2626;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px;
+  color: #6b7280;
+}
+/* SLIDER CORRIGIDO */
+.slider {
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  animation: slide 18s infinite;
+}
+
+.slides img {
+  width: 100%;
+  height: 400px;       /* pode ajustar */
+  object-fit: cover;
+  display: block;      /* evita falhas */
+}
+
+/* Animação universal — funciona com qualquer número de imagens */
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  33%  { transform: translateX(0); }
+
+  36%  { transform: translateX(-100%); }
+  66%  { transform: translateX(-100%); }
+
+  69%  { transform: translateX(-200%); }
+  100% { transform: translateX(-200%); }
+}
+
+/* SLIDER COMPLETO */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  height: 380px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.slides {
+  display: flex;
+  height: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* BOTÕES */
+.slider .nav {
+  position: absolute;
+  top: 95%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.75);
+  color: #000;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.slider .prev { left: 10px; }
+.slider .next { right: 10px; }
+
+.slider .nav:hover {
+  background: rgba(255,255,255,0.95);
+}
+
+/* DOTS */
+.dots {
+  position: absolute;
+  width: 100%;
+  bottom: 12px;
+  text-align: center;
+}
+
+.dots span {
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background: #ddd;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dots .active {
+  background: #dc2626;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .slider {
+    height: 250px;
+  }
+
+  .slider .nav {
+    padding: 8px;
+    font-size: 18px;
+  }
+}
+
+/* FAQ */
+.faq-section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.faq-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.faq-item {
+  background: #ffffff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.faq-item h3 {
+  font-size: 20px;
+  margin: 0 0 8px 0;
+  color: #1f2937;
+}
+
+.faq-item p {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .faq-item {
+    padding: 18px;
+  }
+
+  .faq-item h3 {
+    font-size: 18px;
+  }
+}
+/* CARDS COMO BOTÕES */
+.card-button {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.2s;
+  display: block;
+  border: 2px solid transparent;
+}
+
+.card-button:hover {
+  transform: scale(1.03);
+  border-color: #dc2626;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-button h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #1f2937;
+}
+
+.card-button p {
+  color: #4b5563;
+  margin-top: 8px;
+}
+
